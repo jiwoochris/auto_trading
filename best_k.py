@@ -3,7 +3,7 @@ import time
 from pandas import DataFrame
 
 def williams(ticker, k):
-    df = pyupbit.get_ohlcv(ticker, interval = "minute10", count= 30)
+    df = pyupbit.get_ohlcv(ticker, interval = "minute30")
 
     range = (df['high'] - df['low']) * k
     target = df['open'] + range.shift(1)

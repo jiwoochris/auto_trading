@@ -13,7 +13,7 @@ while True:
     
     now = datetime.datetime.now()
 
-    if now.minute % 10 == 0 and 0 <= now.second <= 10:
+    if now.minute % 30 == 0 and 0 <= now.second <= 10:
         if hold_flag == True:
             ret = sell_crypto_currency(upbit)
             ret = upbit.get_order(ret)

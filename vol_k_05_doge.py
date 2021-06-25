@@ -3,8 +3,8 @@ import time
 import datetime
 
 def get_target_price():
-    df = pyupbit.get_ohlcv("KRW-DOGE", interval = "minute10")
-    volatility = (df.iloc[-2, 1] - df.iloc[-2, 2]) * 0.6
+    df = pyupbit.get_ohlcv("KRW-DOGE", interval = "minute30")
+    volatility = (df.iloc[-2, 1] - df.iloc[-2, 2]) * 0.5
     target_price = df.iloc[-1, 0] + volatility
     return target_price
 
